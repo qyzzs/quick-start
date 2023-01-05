@@ -1,3 +1,11 @@
+/*
+ * @Author: qyzzs qyzzzs@163.com
+ * @Date: 2023-01-04 17:17:40
+ * @LastEditors: qyzzs qyzzzs@163.com
+ * @LastEditTime: 2023-01-05 17:38:43
+ * @FilePath: \tauri-app\src-tauri\src\menu\app_menu.rs
+ * @Description: 应用菜单
+ */
 use tauri::utils::assets::EmbeddedAssets;
 use tauri::{ AboutMetadata, Context, CustomMenuItem, Menu, MenuItem, Submenu, WindowMenuEvent };
 
@@ -33,7 +41,7 @@ pub fn init(context: &Context<EmbeddedAssets>) -> Menu {
 // 应用菜单处理事件
 pub fn handler(event: WindowMenuEvent) {
     // 菜单所属的窗口
-    let win = Some(event.window());
+    let _win = Some(event.window());
     // 匹配菜单 id
     match event.menu_item_id() {
         "new_file" => {
