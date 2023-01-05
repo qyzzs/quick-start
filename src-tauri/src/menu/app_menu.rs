@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-04 17:17:40
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-05 17:38:43
+ * @LastEditTime: 2023-01-05 18:18:23
  * @FilePath: \tauri-app\src-tauri\src\menu\app_menu.rs
  * @Description: 应用菜单
  */
@@ -24,8 +24,8 @@ pub fn init(context: &Context<EmbeddedAssets>) -> Menu {
     let file_menu = Submenu::new(
         "File",
         Menu::new()
-            .add_item(CustomMenuItem::new("new_file".to_string(), "New File"))
-            .add_item(CustomMenuItem::new("edit_file".to_string(), "Edit File"))
+            .add_item(CustomMenuItem::new("import_config".to_string(), "导入配置"))
+            .add_item(CustomMenuItem::new("export_config_template".to_string(), "导出配置模板"))
     );
     // 编辑菜单（自定义菜单）
     let edit_menu = Submenu::new(
@@ -44,13 +44,13 @@ pub fn handler(event: WindowMenuEvent) {
     let _win = Some(event.window());
     // 匹配菜单 id
     match event.menu_item_id() {
-        "new_file" => {
+        "import_config" => {
             // debug 信息（终端输出）
             dbg!("new file");
         }
-        "edit_file" => {
+        "export_config_template" => {
             // 发送信息到菜单所属窗口（弹窗形式）
-            
+
         }
         "undo" => {
             dbg!("undo");
@@ -58,6 +58,6 @@ pub fn handler(event: WindowMenuEvent) {
         "redo" => {
             dbg!("redo");
         }
-        _ => {}
+        _ => { print!("{}", event.menu_item_id()) }
     }
 }

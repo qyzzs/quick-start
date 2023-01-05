@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-05 17:02:08
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-05 17:38:58
+ * @LastEditTime: 2023-01-05 17:56:34
  * @FilePath: \tauri-app\src-tauri\src\menu\system_tray_menu.rs
  * @Description: 系统托盘菜单
  */
