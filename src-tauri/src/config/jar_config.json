@@ -1,3 +1,19 @@
 {
-    
+  "cmd": "java",
+  "options": [
+    {
+      "label": "jar",
+      "key":"-jar",
+      "value": "",
+      "require": "true"
+    },
+    {
+      
+      "label": "设置初始 Java 堆大小",
+      "key":"-Xms",
+      "value": "",
+      "require": "true"
+    }
+  ],
+  "parameter":""
 }

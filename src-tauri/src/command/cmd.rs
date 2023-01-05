@@ -6,7 +6,7 @@
  * @FilePath: \tauri-app\src-tauri\src\command\command_builder.rs
  * @Description:
  */
-use std::process::Command;
+// use std::process::Command;
 
  struct Cmd {
     command: String,
@@ -15,16 +15,17 @@ use std::process::Command;
 }
 
 impl Cmd {
-    pub fn new(command: String, options: String, parameter: String) -> String {
+    pub fn new(command: String, options: String, parameter: String)->Cmd {
         Cmd { command, options, parameter }
     }
 
     fn init(&self) -> String {
-        command + options + parameter
+        String::new() + &self.command + &self.options + &self.parameter
     }
 
     pub fn exec(&self) -> String {
-        let cmd = init();
-        Command.new(self.command).arg(self.options);
+        let cmd = self.init();
+        // Command.new(self.command).arg(self.options);
+        cmd
     }
 }
