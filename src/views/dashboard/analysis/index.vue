@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-04 16:01:47
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-05 10:58:23
+ * @LastEditTime: 2023-01-06 13:13:17
  * @FilePath: \tauri-app\src\views\home\index.vue
  * @Description: 
 -->
@@ -15,13 +15,13 @@
     </a-space>
     {{ greetMsg }}
   </div>
-  <GreetVue/>
+  <!-- <GreetVue/> -->
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import {invoke} from '@tauri-apps/api/tauri'
-import GreetVue from "../../components/Greet.vue";
+// import GreetVue from "/@/components/Greet.vue";
 // import { emit, listen } from "@tauri-apps/api/event";
 
 const value = ref("");
