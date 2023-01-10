@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-04 17:17:40
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-05 18:18:23
+ * @LastEditTime: 2023-01-09 22:48:08
  * @FilePath: \tauri-app\src-tauri\src\menu\app_menu.rs
  * @Description: 应用菜单
  */
@@ -22,14 +22,14 @@ pub fn init(context: &Context<EmbeddedAssets>) -> Menu {
     );
     // 文件菜单（自定义菜单）
     let file_menu = Submenu::new(
-        "File",
+        "File(TODO)",
         Menu::new()
             .add_item(CustomMenuItem::new("import_config".to_string(), "导入配置"))
             .add_item(CustomMenuItem::new("export_config_template".to_string(), "导出配置模板"))
     );
     // 编辑菜单（自定义菜单）
     let edit_menu = Submenu::new(
-        "Edit",
+        "Edit(TODO)",
         Menu::new()
             .add_item(CustomMenuItem::new("undo".to_string(), "Undo"))
             .add_item(CustomMenuItem::new("redo".to_string(), "Redo"))
