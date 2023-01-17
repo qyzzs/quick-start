@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-04 13:17:20
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-10 22:17:35
+ * @LastEditTime: 2023-01-13 16:26:07
  * @FilePath: \tauri-app\src-tauri\src\main.rs
  * @Description:
  */
@@ -10,15 +10,8 @@
 #![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
 mod base;
 mod menu;
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
-#[derive(Clone, serde::Serialize)]
-struct Payload {
-    message: String,
-}
+use base::template_manage::*;
+use base::command;
 
 fn main() {
     let context = tauri::generate_context!();
@@ -27,9 +20,12 @@ fn main() {
         ::default()
         .invoke_handler(
             tauri::generate_handler![
-                greet,
-                base::template::add_template,
-                base::base_command::get_config
+                template::add_template,
+                config::add_config,
+                config_options::add_config_option,
+                config_arguments::add_config_argument,
+                command::base_command::get_config,
+                template::list_all
             ]
         )
         .system_tray(menu::system_tray_menu::menu())

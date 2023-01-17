@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-06 11:13:40
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-06 18:07:12
+ * @LastEditTime: 2023-01-13 11:47:57
  * @FilePath: \tauri-app\src\layout\index.vue
  * @Description: 
 -->
@@ -59,7 +59,7 @@ import sidebar from "./sidebar/index.vue";
 }
 
 .app-header {
-  padding-left: 240px;
+  padding-left: 160px;
   width: 100%;
   background-color: #fff;
   box-sizing: border-box;
@@ -68,16 +68,17 @@ import sidebar from "./sidebar/index.vue";
   position: fixed;
   left: 0;
   top: 0;
-  width: 240px;
+  width: 160px;
   height: 100%;
   z-index: 1025;
+  background-color: #fff;
 }
 .app-main {
     position: absolute;
-    left: 240px;
+    left: 160px;
     padding:12px;
     // padding-bottom: 20px;
-    width: calc(100% - 240px);
+    width: calc(100% - 160px);
     height: calc(100% - 70px);
     box-sizing: border-box;
     overflow: hidden;

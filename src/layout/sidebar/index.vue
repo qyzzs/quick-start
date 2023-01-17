@@ -2,7 +2,7 @@
  * @Author: qyzzs qyzzzs@163.com
  * @Date: 2023-01-06 11:13:40
  * @LastEditors: qyzzs qyzzzs@163.com
- * @LastEditTime: 2023-01-09 11:28:31
+ * @LastEditTime: 2023-01-12 16:30:45
  * @FilePath: \tauri-app\src\layout\sidebar\index.vue
  * @Description: 
 -->
@@ -11,7 +11,6 @@
     id="dddddd"
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
-    style="width: 256px"
     mode="inline"
     @click="handleClick"
   >
